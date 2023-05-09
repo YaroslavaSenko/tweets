@@ -39,8 +39,13 @@ const Tweets = () => {
 
     return (
         <>  
-        <BackLink to={backLinkHref}>Back</BackLink>
+        
+        <Nav>
+                <BackLink to={backLinkHref}>Back</BackLink>
+                
+            </Nav>
             <Nav>
+                
                 <Filter />
             </Nav>
             <CardsList users={users.slice(0, visible)}/>
