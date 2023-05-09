@@ -1,6 +1,6 @@
 
 
-import { Container } from './Layout.styled';
+import { Container, Navigation, Text} from './Layout.styled';
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
@@ -8,14 +8,14 @@ export const Layout = () => {
     return (
       <Container>
         <header>
-            <nav>
+            <Navigation>
                 <NavLink to='/'>
-<h2>Home</h2>
+<Text>Home</Text>
                 </NavLink>
                 <NavLink to='/tweets'>
- <h2>Tweets</h2>
+ <Text>Tweets</Text>
                 </NavLink>
-            </nav>
+            </Navigation>
             </header>
         <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
