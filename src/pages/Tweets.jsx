@@ -3,7 +3,7 @@ import { useDispatch, useSelector,  } from "react-redux";
 import { useEffect, useState } from "react";
 import {  fetchUsers } from "../redux/operations";
 import { selectError, selectIsLoading, selectUserFilter, } from "../redux/selectors";
-import { LoadMore, Nav } from "./Tweets.styled";
+import { Button, Nav } from "./Tweets.styled";
 
 
 import CardsList from "../components/Cards/CardsList/CardsList";
@@ -40,7 +40,7 @@ const Tweets = () => {
             <CardsList users={users.slice(0, visible)}/>
             {isLoading && !error && <Loader/>}
             {visible < users.length && (
-                <LoadMore onClick={showMoreUsers}>Load more</LoadMore>
+                <Button onClick={showMoreUsers}>Load more</Button>
             )}
         </>
     )
