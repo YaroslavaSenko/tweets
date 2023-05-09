@@ -1,6 +1,6 @@
 import { HiArrowLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled from '@emotion/styled';
 
 const StyledLink = styled(Link)`
   display: inline-flex;
@@ -11,6 +11,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-weight: 500;
   text-transform: uppercase;
+  padding-right: 60px;
 
   :hover {
     color: orangered;
