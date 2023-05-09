@@ -1,4 +1,4 @@
-import { Container } from './Home.styled';
+import { Container, Text } from './Home.styled';
 
 
 const Home = () => {
@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Container>
       
-      <h1>Welcome user!</h1>
+      <Text>Welcome user!</Text>
       
     </Container>
   );
