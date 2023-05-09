@@ -9,6 +9,8 @@ import { Button, Nav } from "./Tweets.styled";
 import CardsList from "../components/Cards/CardsList/CardsList";
 import Loader from "../components/Loader/Loader";
 import Filter from "../components/Filter/Filter";
+import { useLocation } from "react-router-dom";
+import { BackLink } from "components/BackLink/BackLink";
 
 
 const Tweets = () => {
@@ -17,6 +19,9 @@ const Tweets = () => {
     const users = useSelector(selectUserFilter);
     const isLoading = useSelector(selectIsLoading);
     const error = useSelector(selectError);
+    const location = useLocation();
+
+  const backLinkHref = location.state?.from ?? '/';
 
   
 
@@ -34,6 +39,7 @@ const Tweets = () => {
 
     return (
         <>  
+        <BackLink to={backLinkHref}>Back</BackLink>
             <Nav>
                 <Filter />
             </Nav>
